@@ -19,9 +19,9 @@ export const ShoppingPage = () => {
             }}>
 
                 {
-                    products.map(product => (
+                    products.map( product => (
                         <ProductCard 
-                            key={product.id}
+                            key={ product.id }
                             product={ product }
                             className="bg-dark text-white"
                             onChange={ onProductCountChange }
@@ -33,14 +33,14 @@ export const ShoppingPage = () => {
                         </ProductCard>
                     ))
                 }
-
             </div>
+            
+            <div className="shopping-cart">
 
-            <div className='shopping-cart'>
                 {
-                     Object.entries(shoppingCart).map(( [key, product] ) => (
+                    Object.entries( shoppingCart ).map( ([ key, product ]) => (
                         <ProductCard 
-                            key={key}
+                            key={ key }
                             product={ product }
                             className="bg-dark text-white"
                             style={{ width: '100px' }}
@@ -59,13 +59,7 @@ export const ShoppingPage = () => {
                 }
 
                 
-            </div>
-            
-            <div>
-                <code>
-                    { JSON.stringify(shoppingCart, null, 5) }
-                </code>
-            </div>
+            </div>           
 
         </div>
     )
